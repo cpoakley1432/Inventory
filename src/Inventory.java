@@ -12,7 +12,7 @@ public class Inventory {
         while (true){
             int num = 1;
             for (InventoryItem item : items ){
-                System.out.println(num + ". " + item.name + " " + item.quantity);
+                System.out.println(num + ". " + item.name + " " + "- inventory amount = " + item.quantity);
                 num ++;
             }
 
@@ -26,7 +26,7 @@ public class Inventory {
             if (itemNum == 1 ){
                 System.out.println("Enter inventory item name and hit enter");
                 String name = scanner.nextLine();
-                InventoryItem invItem = new InventoryItem(name , 0 );
+                InventoryItem invItem = new InventoryItem(name.toUpperCase() , 0 );
                 items.add(invItem);
             }
             else if (itemNum == 2 ){
